@@ -1,5 +1,25 @@
+@import 'components/header.css';
 @import 'components/layout.css';
+
+:root {
+	--pink: #e6007e;
+	--blue: #2d2e83;
+}
 
 body {
 	font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	color: var(--blue);
+}
+
+a {
+	color: var(--pink);
 }

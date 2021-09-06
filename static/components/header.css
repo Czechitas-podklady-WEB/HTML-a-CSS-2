@@ -1,0 +1,21 @@
+.header {
+	padding: 2em 0 3em;
+}
+.header h1 {
+	font-size: 2rem;
+	margin: 0;
+}
+.header a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: var(--blue);
+	justify-content: center;
+}
+.header a span {
+	margin-top: 0.5em;
+	font-size: 0.5em;
+}
+.header img {
+	margin-right: 0.4em;
+}
