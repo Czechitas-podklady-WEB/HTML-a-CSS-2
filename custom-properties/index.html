@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Custom properties</h1>
+<p>Někdy označované i jako CSS proměnné/variables. Slouží k pojmenování hodnot. Typicky se hodí například pro hodnoty často se opakující, barvy, velikosti nadpisů.</p>
+<h2>Selektor <code>:root</code></h2>
+<p>Chová se jako selektor <code>html</code>, ale s větší specificitou.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span><br>	<span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Kód výše skryje veškerý obsah.</p>
+<h2>Nastavení custom property</h2>
+<p>Název musí začínat na <code>--</code>, dvě znaménka minus.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span><br>	<span class="token property">--hlavni-barva</span><span class="token punctuation">:</span> #2d2e83<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h2>Použití hodnoty</h2>
+<p>Název obalíme do funkce <code>var()</code>.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">header</span> <span class="token punctuation">{</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--hlavni-barva<span class="token punctuation">)</span><span class="token punctuation">;</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">a</span> <span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--hlavni-barva<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+
+			</main>
+		</div>
+	</body>
+</html>
