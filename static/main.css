@@ -8,6 +8,7 @@
 
 body {
 	font-family: sans-serif;
+	padding-bottom: 6em;
 }
 
 h1,
@@ -22,4 +23,15 @@ h6 {
 
 a {
 	color: var(--pink);
+}
+
+p > code,
+li > code,
+dd > code,
+td > code {
+	background: #2d2f8313;
+	word-wrap: break-word;
+	box-decoration-break: clone;
+	padding: 0rem 0.3rem 0.13rem;
+	border-radius: 0.2rem;
 }
