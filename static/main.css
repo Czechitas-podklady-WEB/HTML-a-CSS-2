@@ -35,3 +35,8 @@ td > code {
 	padding: 0rem 0.3rem 0.13rem;
 	border-radius: 0.2rem;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+}

@@ -81,25 +81,108 @@
 <p><img src="static/screenshots/terminal-git-kontrola.png" alt="kontrola"></p>
 </li>
 </ul>
-<h2>Vytvoření repozitáře</h2>
-<h3>Z nuly</h3>
-<h3>Zkopírováním jiného (fork)</h3>
-<h2>Práce na projektu</h2>
+<h2>Vytvoření repozitáře z nuly</h2>
+<p>Žádný počítač nevydrží věčně. Radši se připrav na nejhorší. Pro případ, že by se tvé zařízení jednou prostě neprobralo, radši všechnu práci zálohuj. Jedna z nejpopulárnějších služeb pro uchování kódu online je <a href="https://github.com/">GitHub</a>. Mimo jiné díky tomu, že nabízí spoustu funkcí zdarma.</p>
 <ul>
-<li><code>git clone …</code></li>
-<li><code>git add .</code></li>
-<li><code>git commit -m &quot;Název změn&quot;</code></li>
-<li><code>git push</code></li>
+<li>
+<p>V gitu a na GitHubu je praktické rozdělovat weby zvlášť na jednotlivé repozitáře. Každá takový repozitář má svůj vlastní název, historii změn a další nastavení. Nový repozitář vytvořím ikonkou ➕ v pravém horním rohu zvolením <code>New repository</code>.</p>
+<p><img src="static/screenshots/github-new-repository.png" alt="New repository na GitHubu"></p>
+</li>
+<li>
+<p>Každý repozitář musí mít vyplněné jméno.</p>
+<p><img src="static/screenshots/github-new-repository-name.png" alt="New repository name"></p>
+</li>
+<li>
+<p>Ve zbylém nastavení je vhodné zvolit <code>Public</code>, což umožní zapnout GitHub pages, které si ukážeme později. Ostatní zaškrtávátka můžou zůstat prázdná.</p>
+<p><img src="static/screenshots/github-new-repository-dalsi-nastaveni.png" alt="další nastavení"></p>
+</li>
+<li>
+<p>Podle následujícího postupu si vytvoř složku s repozitářem u sebe na počítači, ve které budeš vytvářet html a css kód, případně přikládat obrázky a jiné typy souborů.</p>
+<ul>
+<li>
+<p>Otevři ve Visual Studio Code složku, kam běžně dáváš většinu webových projektů.</p>
+</li>
+<li>
+<p>Otevři terminál a zadej do něj <code>git clone https://github.com/FilipChalupa/muj-prvni-web.git</code>. Adresu nahraď tvou vlastní.</p>
+<p><img src="static/screenshots/github-kopirovat-url.png" alt="kopie url"></p>
+<p><img src="static/screenshots/git-clone.png" alt="git clone"></p>
+</li>
+<li>
+<p>Otevři ve Visual Studio Code jen nově vytvořenou složku.</p>
+<p><img src="static/screenshots/vscode-open-folder.png" alt="open folder"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Práce na projektu</h2>
+<p>Pomocí <code>git clone …</code> sis vytvořila složku, která je provázaná s GitHub repozitářem. V dalších krocích následuje postup, jak přidávat a zálohovat nový obsah.</p>
+<ol>
+<li>Přidej/uprav nějaký soubor nebo několik spolu souvisejících souborů.</li>
+<li>V příkazové řádce označ soubory, že jsou nachystané pro zálohu pomocí <code>git add .</code></li>
+<li>Balíček změn pojmenuj přes <code>git commit -m &quot;Stručný popis změn na pár slov&quot;</code>.</li>
+<li>Commit nahraj na GitHub zadáním <code>git push</code>.</li>
+<li>Zkontroluj, že změny se ukazují na GitHubu a pokračuj od bodu 1.</li>
+</ol>
+<h2>Úkol na teď</h2>
+<p>Postupuj podle <a href="git-cviceni">zadání zde</a>.</p>
+<h2>Bonus</h2>
+<ul>
+<li>
+<p>Nainstaluj a prozkoumej <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a>.</p>
+<ul>
+<li>
+<p>Zobraz si historii změn.</p>
+</li>
+<li>
+<p>Proklikej pár commitů.</p>
+</li>
+<li>
+<p>Koukni, jak vypadá <code>diff</code>. Rozklikni v commitu soubor. Červenou uvidíš smazané řádky a zelenou nově přidané.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Nainstaluj a prozkoumej <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a>.</p>
+<ul>
+<li>U jednotlivých řádků by se ti nově mělo ukazovat šedým nevýrazným textem, kdo je kdy upravil.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://dev.to/ifierygod/git-and-github-the-complete-guides-chapter-1-23cp">Git and GitHub - The Complete Guides</a></p>
+</li>
 </ul>
 <h2>GitHub pages</h2>
 <p>Kromě podpory gitu GitHub nabízí doplňkovou službu GitHub pages, díky které je možné si nechat zdarma hostovat stránky.</p>
-<h2>Úkol na teď</h2>
-<h2>Bonus</h2>
-<ul>
-<li>Nainstalovat a prozkoumat <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">GitLens</a></li>
-<li>Nainstalovat a prozkoumat <a href="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph">Git Graph</a></li>
-<li><a href="https://dev.to/ifierygod/git-and-github-the-complete-guides-chapter-1-23cp">Git and GitHub - The Complete Guides</a></li>
-</ul>
+<ol>
+<li>
+<p>Nastavení najdeš pod tlačítkem <code>Settings</code>.</p>
+<p><img src="static/screenshots/github-settings.png" alt="tlačítko Settings"></p>
+</li>
+<li>
+<p>V sekci <code>Pages</code>.</p>
+<p><img src="static/screenshots/github-settings-pages.png" alt="tlačítko Pages"></p>
+</li>
+<li>
+<p>V <code>Source</code> zvol větev <code>main</code>/<code>master</code> a ulož. O kousek výše se zobrazí zelená bublina s veřejnou adresou, kde web z kódu v repozitáři nově běží.</p>
+<p><img src="static/screenshots/github-pages-branch.png" alt="branch"></p>
+</li>
+</ol>
+<h2>Fork</h2>
+<p>Občas se hodí navázat na práci, kterou začal někdo jiný. Tlačítkem <code>Fork</code> u cizího repozitáře vytvoříš tvou vlastní kopii, kterou můžeš dále upravovat, aniž bys zasáhla do původního kódu patřícího někomu jinému. Tuto fukci můžeš využít například pro řešení budoucích cvičení během lekcí zadaných v samostatných repozitářích.</p>
+<ol>
+<li>
+<p>Tlačítkem <code>Fork</code> vytvoříš kopii.</p>
+<p><img src="static/screenshots/fork-tlacitko.png" alt="tlačítko fork"></p>
+</li>
+<li>
+<p>V nově vzniklém repozitář zůstane poznámka s odkazem na originál.</p>
+<p><img src="static/screenshots/fork-odkaz-na-puvodni-repozitar.png" alt="odkaz na původní repozitář"></p>
+</li>
+<li>
+<p>Pod rozkliknutým zeleným tlačítkem <code>Code</code> najdeš adresu pro klonování.</p>
+<p><img src="static/screenshots/github-code-url.png" alt="code"></p>
+</li>
+</ol>
 
 			</main>
 		</div>
