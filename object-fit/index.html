@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Vyplnění plochy obrázkem</h1>
+<p>Vlastností <code>object-fit</code> můžeš specifikovat, jak má obrázek vyplnit omezenou plochu. Pokud obrázku nastavíš rozměry, které mají jiný poměr stran, obrázek se deformuje.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">img</span> <span class="token punctuation">{</span><br>	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span><br>	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Nastavením <code>img { object‑fit: cover; }</code> obrázku řekneš, že se má případně oříznout, aby zabránil deformaci. Hodnotou <code>contain</code> zabráníš deformaci i ořezu, ale kolem obrázku může vzniknout prázdné místo.</p>
+<p>Ukázku najdeš například na <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">MDN</a>.</p>
+<p>S <code>object-fit: cover</code> se občas používá i doplňková vlastnost <code>object-position</code>, kterou je možné dospecifikovat, v které části obrázku je to nejduležitější, co se nemá ořezávat.</p>
+<p><img src="static/screenshots/object-fit.png" alt="ukázka"></p>
+<h2>Dobrovolný úkol</h2>
+<p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-CSS-grid-galerie">github.com/…/Cviceni-CSS-grid-galerie</a>.</p>
+
+			</main>
+		</div>
+	</body>
+</html>
