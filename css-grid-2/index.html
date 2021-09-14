@@ -34,9 +34,12 @@
 <h2>Úkol na teď</h2>
 <p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-CSS-grid-kalendar">github.com/…/Cviceni-CSS-grid-kalendar</a>.</p>
 <h2>Vyplnění plochy obrázkem</h2>
-<ul>
-<li><code>object-fit</code></li>
-</ul>
+<p>Vlastností <code>object-fit</code> můžeš specifikovat, jak má obrázek vyplnit omezenou plochu. Pokud obrázku nastavíš rozměry, které mají jiný poměr stran, obrázek se deformuje.</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">img</span> <span class="token punctuation">{</span><br>	<span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span><br>	<span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Nastavením <code>img { object‑fit: cover; }</code> obrázku řekneš, že se má případně oříznout, aby zabránil deformaci. Hodnotou <code>contain</code> zabráníš deformaci i ořezu, ale kolem obrázku může vzniknout prázdné místo.</p>
+<p>Ukázku najdeš například na <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">MDN</a>.</p>
+<p>S <code>object-fit: cover</code> se občas používá i doplňková vlastnost <code>object-position</code>, kterou je možné dospecifikovat, v které části obrázku je to nejduležitější, co se nemá ořezávat.</p>
+<p><img src="static/screenshots/object-fit.png" alt="ukázka"></p>
 <h2>Dobrovolný úkol</h2>
 <p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-CSS-grid-galerie">github.com/…/Cviceni-CSS-grid-galerie</a>.</p>
 
