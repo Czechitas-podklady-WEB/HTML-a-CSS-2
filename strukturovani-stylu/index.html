@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Strukturování stylů</h1>
+<p>Větší projekty mohou mít stovky i tisíce řádků CSS. Pro větší přehlednost je lepší kód rozdělit do více souborů. Typicky po komponentách.</p>
+<h3>Styly</h3>
+<h4>spolecne.css</h4>
+<pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span><br>	<span class="token property">font-family</span><span class="token punctuation">:</span> Helvetica<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> #000000<span class="token punctuation">;</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h4>hlavicka.css</h4>
+<pre class="language-css"><code class="language-css"><span class="token selector">.hlavicka</span> <span class="token punctuation">{</span><br>	<span class="token property">min-height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span><br>	<span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.hlavicka__logo</span> <span class="token punctuation">{</span><br>	<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span><br>	<span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.hlavicka__navigace</span> <span class="token punctuation">{</span><br>	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h4>tlacitko.css</h4>
+<pre class="language-css"><code class="language-css"><span class="token selector">.tlacitko</span> <span class="token punctuation">{</span><br>	<span class="token property">border</span><span class="token punctuation">:</span> 1px solid<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.tlacitko--uspech</span> <span class="token punctuation">{</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> #04a006<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<h3>Propojení přes HTML</h3>
+<p>To celé pak spojíme dohromady pomocí HTML <code>&lt;link&gt;</code> tagu.</p>
+<h4>index.html</h4>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>spolecne.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hlavicka.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>tlacitko.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code></pre>
+<p>Prohlížeč může začít stahovat všechny styly po načtení <code>index.html</code> hned, ale linky na jednotlivé komponenty musíme zopakovat několikrát s každou další podstránkou.</p>
+<h3>Propojení přes CSS</h3>
+<p>Nebo přes <code>@import</code> v CSS.</p>
+<h4>vse.css</h4>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'spolecne.css'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><br><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'hlavicka.css'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span><br><span class="token atrule"><span class="token rule">@import</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'tlacitko.css'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span></span></code></pre>
+<h4>index.html</h4>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span><br>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>vse.css<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></code></pre>
+<p>Prohlížeč stáhne <code>index.html</code>. V něm se dozví, že potřebuje <code>vse.css</code>. Teprve stažení <code>vse.css</code> bude vědět, že potřebuje další soubory. Na takovém postupném vodopádu se trochu zdrží.</p>
+<h2>Úkol na teď</h2>
+<p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-BEM-a-strukturovani">github.com/…/Cviceni-BEM-a-strukturovani</a>. Další lekci budeme mít až za dva týdny. Cvičení můžeš dobrovolně dopracovat doma.</p>
+
+			</main>
+		</div>
+	</body>
+</html>

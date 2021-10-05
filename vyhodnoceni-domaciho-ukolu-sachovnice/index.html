@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Vyhodnocení domácího úkolu: Šachovnice</h1>
+<p>Podmínkou pro udělení certifikátu na konci kurzu je odevzdání všech povinných domácích úkolů.</p>
+<h2>Poměr stran</h2>
+<ul>
+<li>
+<p><code>aspect-ratio</code></p>
+<ul>
+<li>Nepodporuje starší Safari.</li>
+</ul>
+</li>
+<li>
+<p><code>padding-top</code></p>
+<ul>
+<li>Univerzální, ale hůře čitelné.</li>
+</ul>
+</li>
+</ul>
+<h2>Pozadí</h2>
+<h3>Hlavní cíle</h3>
+<ul>
+<li>
+<p>Ušetření množství přenesených dat.</p>
+</li>
+<li>
+<p>Čitelný kód.</p>
+</li>
+<li>
+<p>Kvalita zobrazení.</p>
+</li>
+</ul>
+<h3>Možné přístupy</h3>
+<ul>
+<li>
+<p>Obrázek s celou šachovnicí.</p>
+<p><img src="static/screenshots/cele-pozadi-sachovnice.png" alt=""></p>
+<ul>
+<li>Jednodušší stylování, ale návštěvník můsí čekat na zbytečně velký soubor, ve kterém se jednotlivá políčka opakují.</li>
+</ul>
+</li>
+<li>
+<p>Výřez ve vektorové grafice.</p>
+<p><img src="static/screenshots/vyrez-pozadi-sachovnice.png" alt=""></p>
+<ul>
+<li>Přes internet projde méně dat. Obrázek se rychleji načte. Opakování zařídí CSS pomocí <code>background‑size</code>. Vektory se postarají o to, že mřížka šachovnice bude ostrá i na kvalitnější obrazovcé nebo při přiblížení.</li>
+</ul>
+</li>
+<li>
+<p>Kombinace gradientu a režimu prolnutí.</p>
+<ul>
+<li>
+<p>Kombinace <code>repeating‑linear‑gradient</code> a <code>mix‑blend‑mode</code>.</p>
+</li>
+<li>
+<p>Ještě o trochu méně dat.</p>
+</li>
+<li>
+<p>Větší flexibilita. Mřížku lze částečně přebarvovat.</p>
+</li>
+<li>
+<p>Špatná čitelnost kódu.</p>
+</li>
+</ul>
+</li>
+</ul>
+
+			</main>
+		</div>
+	</body>
+</html>
