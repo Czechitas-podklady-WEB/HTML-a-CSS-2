@@ -6,9 +6,21 @@
 	--blue: #2d2e83;
 }
 
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
 	font-family: sans-serif;
-	padding-bottom: 6em;
+	margin: 0;
+	display: grid;
+	min-height: 100vh;
 }
 
 h1,
@@ -23,6 +35,11 @@ h6 {
 
 a {
 	color: var(--pink);
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
 }
 
 p > code,

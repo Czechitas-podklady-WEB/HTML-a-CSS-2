@@ -1,21 +1,26 @@
 .header {
-	padding: 2em 0 3em;
+	padding: 1em 0 2em;
+	text-align: center;
 }
 .header h1 {
 	font-size: 2rem;
 	margin: 0;
 }
-.header a {
-	display: flex;
+.header__link {
+	display: inline-flex;
 	align-items: center;
 	text-decoration: none;
 	color: var(--blue);
 	justify-content: center;
 }
-.header a span {
+.header__link span {
 	margin-top: 0.5em;
 	font-size: 0.5em;
 }
 .header img {
 	margin-right: 0.4em;
+}
+.header__link:hover,
+.header__link:focus {
+	filter: drop-shadow(0 0 10px #e6007f21);
 }

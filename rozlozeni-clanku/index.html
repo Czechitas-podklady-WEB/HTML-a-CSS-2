@@ -16,7 +16,7 @@
 		<div class="layout">
 			<header class="header">
 				<h1>
-					<a href="">
+					<a href="" class="header__link">
 						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
 						<span>HTML a CSS 2</span>
 					</a>
@@ -29,25 +29,22 @@
 <pre class="language-css"><code class="language-css"><span class="token selector">.kontejner</span> <span class="token punctuation">{</span><br>	<span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>	<span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr 4fr 2fr<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.polozka</span> <span class="token punctuation">{</span><br>	<span class="token property">grid-column</span><span class="token punctuation">:</span> 2<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.polozka-na-cely-radek</span> <span class="token punctuation">{</span><br>	<span class="token property">grid-column</span><span class="token punctuation">:</span> 1 / -1<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <h2>Specificita</h2>
 <p>Některé CSS selektory jsou pro prohlížeč důležitější než jiné. Nehledí pak na jejich pořadí, ale důležitost.</p>
-<p>Jakou marvu textu a pozadí bude <code>div</code> mít?</p>
+<p>Jakou barvu textu a pozadí bude <code>div</code> mít?</p>
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>muj-text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Lorem ipsum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <pre class="language-css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">{</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> purple<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.muj-text</span> <span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">div</span> <span class="token punctuation">{</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>Pozadí bude žluté. Vítězí poslední nastavená barva.</p>
 <p>Text bude červený, protože selektor s třídou má větší specificitu než s názvem prvku.</p>
 <h2>Podklady</h2>
 <ul>
-<li>
-<p><a href="https://umaar.com/dev-tips/226-vs-code-selector-specificity/">Ukázka kalkulačky ve VS Code</a></p>
-</li>
-<li>
-<p><a href="https://www.vzhurudolu.cz/prirucka/css-kaskada#specificita">Vzhůru dolů</a></p>
-</li>
-<li>
-<p><a href="https://css-tricks.com/specifics-on-css-specificity/">CSS Tricks</a></p>
-</li>
+<li><a href="https://umaar.com/dev-tips/226-vs-code-selector-specificity/">Ukázka kalkulačky ve VS Code</a></li>
+<li><a href="https://www.vzhurudolu.cz/prirucka/css-kaskada#specificita">Vzhůru dolů</a></li>
+<li><a href="https://css-tricks.com/specifics-on-css-specificity/">CSS Tricks</a></li>
 </ul>
 
 			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
 		</div>
 	</body>
 </html>
