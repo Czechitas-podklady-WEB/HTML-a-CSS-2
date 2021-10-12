@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Úvod do SASSu</h1>
+<p>SASS je obohacené CSS. Jedná se o takzvaný preprocesor. Kód napsaný v SASSu je potřeba nejdříve převést do CSS, aby kódu rozuměly i prohlížeče. Oficiální dokumentace je <a href="https://sass-lang.com/">sass-lang.com</a>.</p>
+<h2>Ukázka</h2>
+<p>Velkou výhodou jazyka SASS je podpora zanořování. Ušetří opakování kódu. To, co bychom v CSS napsali třeba takto:</p>
+<h3><code>styly.css</code></h3>
+<pre class="language-css"><code class="language-css"><span class="token selector">.tlacitko</span> <span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">.tlacitko--vystrazne</span> <span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>by v SASSu bylo takto:</p>
+<h3><code>styly.scss</code></h3>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.tlacitko </span><span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span><br><br>	<span class="token selector"><span class="token parent important">&amp;</span>--vystrazne </span><span class="token punctuation">{</span><br>		<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><br>	<span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<p>Všimni si, že jsme ušetřili jeden výskyt slova <code>tlacitko</code>, a zároveň se vše ohledně tlačítka zabalilo do jednoho bloku. Kód je tak přehlednější a do budoucna udržitelnější. Například přejmenovat <code>tlacitko</code> na anglické <code>button</code> je teď změna jen jednoho řádku.</p>
+<h2>Převod na CSS</h2>
+<p>Protože prohlížeče SASSu nerozumí, je potřeba náš kód <code>sestavit</code>, převést. K tomu nám pomůže balíček <a href="https://www.npmjs.com/package/sass">sass</a>, který do projektu doinstalujeme spuštěním příkazu <code>npm install sass</code>.</p>
+<p>Protože příkaz budeme pouštět často, bude se nám hodit v <code>package.json</code> zkratka:</p>
+<pre class="language-json"><code class="language-json">	<span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>		<span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"sass styly.scss styly.css"</span><br>	<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<p>Zkratku pustím přes <code>npm run build</code>. Odstartuje se převod, který vezme soubor <code>styly.scss</code> a výsledek uloží do <code>styly.css</code>. V HTML se pak odkazuje na výsledný soubor přes <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;styly.css&quot;&gt;</code>.</p>
+<h2>Přípony <code>.scss</code> a <code>.sass</code></h2>
+<p>SASS podporuje dva formáty, které rozlišuje podle přípony souboru. Oba jsou si velmi podobné, v souborech končících na <code>.sass</code> ale nepíšeme složené závorky a středníky. Druhý formát je úspornější, ale méně se podobá CSS a pro ně někoho je tak méně čitelný.</p>
+<h3><code>styly.scss</code></h3>
+<pre class="language-scss"><code class="language-scss"><span class="token selector">.tlacitko </span><span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span><br><br>	<span class="token selector"><span class="token parent important">&amp;</span>--vystrazne </span><span class="token punctuation">{</span><br>		<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span><br>	<span class="token punctuation">}</span><br><span class="token punctuation">}</span></code></pre>
+<h3><code>styly.sass</code></h3>
+<pre class="language-sass"><code class="language-sass"><span class="token selector">.tlacitko</span><br><span class="token property-line">	<span class="token property">color</span><span class="token punctuation">:</span> blue</span><br><br>	<span class="token selector">&amp;--vystrazne</span><br><span class="token property-line">		<span class="token property">color</span><span class="token punctuation">:</span> red</span></code></pre>
+<h2>Proměnné a funkce</h2>
+<p>Pojmenováváme je se znakem dolaru na začátku. Můžeme do nich uložit například barvu, velikost nebo jiné hodnoty.</p>
+<pre class="language-scss"><code class="language-scss"><span class="token property"><span class="token variable">$hlavni-barva</span></span><span class="token punctuation">:</span> magenta<span class="token punctuation">;</span><br><br><span class="token selector">.tlacitko </span><span class="token punctuation">{</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$hlavni-barva</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Hlavní výhoda proměnných je podobná jako u custom properties. Často opakované hodnoty můžeme zadefinovat na jednom místě.</p>
+<p>V případě barev můžeme zapojit zabudované funkce SASSu pro manipulaci barev. Pokud bychom chtěli třeba pro červenou barvu zjistit její doplňkovou, napíšeme <code>color: adjust-hue(red, 180deg)</code>. CSS výsledek by byl v tomto případě <code>color: aqua</code>.</p>
+<h2>Úkol na teď</h2>
+<p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-SASS-prevody">github.com/…/Cviceni-SASS-prevody</a>.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>

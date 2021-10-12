@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Příkaz npm</h1>
+<p><code>npm</code> je program pro příkazovou řádku. Usnadňuje stahování balíčků z <a href="https://www.npmjs.com/">npmjs.com</a> a jejich správu.</p>
+<h2>Instalace</h2>
+<p>S <code>npm</code> se pojí druhý program <code>node</code>, na kterém je <code>npm</code> postavené. Oba programy se instalují společně stažením a spuštěním příslušného instalačního souboru zde <a href="https://nodejs.org/en/download/">nodejs.org</a>.</p>
+<p>Zdali instalace dopadla úspěšně můžeš ověřit zadáním příkazu <code>npm --version</code> do příkazové řádky, případně <code>node --version</code>. Pokud jsi měla řádku otevřenou během instalace, bude ji možná potřeba zavřít a znovu otevřít, protože jinak se nedozví, že jsou k dispozici nové programy.</p>
+<h2>Založení nového projektu na npm</h2>
+<p>Spuštěním <code>npm init</code> se aktuální složka nastaví jako kořenová pro nový projekt, který bude využívat výhody <code>npm</code>. Vznikne zároveň soubor <code>package.json</code> s jeho konfigurací. Výsledek může vypadat třeba takto:</p>
+<h3><code>package.json</code></h3>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><br>	<span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"zkouska"</span><span class="token punctuation">,</span><br>	<span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0.0"</span><span class="token punctuation">,</span><br>	<span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span><br>	<span class="token property">"main"</span><span class="token operator">:</span> <span class="token string">"index.js"</span><span class="token punctuation">,</span><br>	<span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>		<span class="token property">"test"</span><span class="token operator">:</span> <span class="token string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span><br>	<span class="token punctuation">}</span><span class="token punctuation">,</span><br>	<span class="token property">"keywords"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><br>	<span class="token property">"author"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span><br>	<span class="token property">"license"</span><span class="token operator">:</span> <span class="token string">"ISC"</span><br><span class="token punctuation">}</span></code></pre>
+<p>K <code>package.json</code> je vyhodné dovytvořit ještě soubor <code>.gitignore</code> a v něm zmínit složku <code>/node_modules/</code>. Gitgnore se postará o to, aby se <code>/node_modules/</code> náhodou nedostala do gitu. Je to pomocná složka <code>npm</code>, kam si občas odkládá na git příliš objemná data, která není potřeba zálohovat.</p>
+<h3><code>.gitignore</code></h3>
+<pre class="language-text"><code class="language-text">/node_modules/</code></pre>
+<h2>Instalace balíčků</h2>
+<p>Když teď máme <code>npm</code>, můžeme projekt rozšířit o závislosti zavoláním <code>npm install nazev-balicku</code>. Balíček se stáhne do <code>/node_modules</code> a zároveň o něm přibyde zmínka v <code>package.json</code>. V případě <code>npm install fslightbox</code> ho už tedy nemusíme ručně stahovat v ZIPu ze stránky s <a href="https://fslightbox.com/javascript/download">dokumentací</a>.</p>
+<p>Pokud pokračujeme na projektu, kde je <code>package.json</code> již vytvořený i se všemi závislostmi, stačí nám je jen doinstalovat samotným zavoláním <code>npm install</code>. Názvy jednotlivých balíčků se automaticky vyčtou z <code>package.json</code>. Toto je častý případ v situaci, kdy třeba klonujeme rozpracovaný projekt.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
