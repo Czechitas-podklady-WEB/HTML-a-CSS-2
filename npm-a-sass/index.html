@@ -38,15 +38,15 @@
 <li>
 <p>Složku <code>node_modules</code> je zvykem necommitovat, protože je velká a její obsah se dá znovu vytvořit spuštěním <code>npm install</code>.</p>
 <ul>
-<li>Pro ignorování složky přidáváme do projektu soubor <code>.gitignore</code> s řádkem <code>node_modules</code>.</li>
+<li>Pro ignorování složky přidáváme do projektu soubor <code>.gitignore</code> s řádkem <code>/node_modules/</code>.</li>
 </ul>
 </li>
 <li>
-<p>Pro sestavení/přeložení zdrojových souborů ze SASSu do CSS přidáváme do <code>package.json</code> v sekci <code>scripts</code> zkratku <code>&quot;build&quot;: &quot;sass zdroj.scss vystup.css&quot;</code>. Po každé změně <code>zdroj.scss</code> pouštíme <code>npm run build</code>.</p>
+<p>Pro sestavení/přeložení zdrojových souborů ze SASSu do CSS přidáváme do <code>package.json</code> v sekci <code>scripts</code> zkratku <code>&quot;build&quot;: &quot;sass zdroj.scss vystup.css&quot;</code>. Po každé změně <code>zdroj.scss</code> pouštíme <code>npm run build</code>.</p>
 </li>
 </ul>
 <h2>Vývojový režim</h2>
-<p>Pokud děláme ve zdrojových souborech hodně změn za sebou, můžeme si ušetřit práci a napouštět <code>npm run build</code> ručně stále dokola. Balíček <code>sass</code> umí běžet i ve sledovacím režimu, kdy ho stačí jednou pustit a on udělá build s každou změnou.</p>
+<p>Pokud děláme ve zdrojových souborech hodně změn za sebou, můžeme si ušetřit práci a nepouštět <code>npm run build</code> ručně stále dokola. Balíček <code>sass</code> umí běžet i ve sledovacím režimu, kdy ho stačí jednou pustit a on udělá build s každou změnou.</p>
 <p>Do <code>scripts</code> v <code>package.json</code> přidáme <code>dev</code> (development) zkratku s přepínačem <code>--watch</code>.</p>
 <pre class="language-json"><code class="language-json">	<span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>		<span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"sass styly.scss styly.css"</span><span class="token punctuation">,</span><br>		<span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"sass --watch styly.scss styly.css"</span><br>	<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 <h2>Spojování</h2>
