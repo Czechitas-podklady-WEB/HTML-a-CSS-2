@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Npm a SASS</h1>
+<h2>Opakování</h2>
+<ul>
+<li>
+<p><code>npm init</code> nachystá složku pro práci s balíčky. Vytvoří soubor <code>package.json</code>.</p>
+</li>
+<li>
+<p><code>npm install sass</code> přidá do projektu balíček <code>sass</code>.</p>
+<ul>
+<li>Najdeme ho v <code>dependencies</code> uvnitř <code>package.json</code> a jeho soubory ve složce <code>node_modules</code>.</li>
+</ul>
+</li>
+<li>
+<p>Složku <code>node_modules</code> je zvykem necommitovat, protože je velká a její obsah se dá znovu vytvořit spuštěním <code>npm install</code>.</p>
+<ul>
+<li>Pro ignorování složky přidáváme do projektu soubor <code>.gitignore</code> s řádkem <code>node_modules</code>.</li>
+</ul>
+</li>
+<li>
+<p>Pro sestavení/přeložení zdrojových souborů ze SASSu do CSS přidáváme do <code>package.json</code> v sekci <code>scripts</code> zkratku <code>&quot;build&quot;: &quot;sass zdroj.scss vystup.css&quot;</code>. Po každé změně <code>zdroj.scss</code> pouštíme <code>npm run build</code>.</p>
+</li>
+</ul>
+<h2>Vývojový režim</h2>
+<p>Pokud děláme ve zdrojových souborech hodně změn za sebou, můžeme si ušetřit práci a napouštět <code>npm run build</code> ručně stále dokola. Balíček <code>sass</code> umí běžet i ve sledovacím režimu, kdy ho stačí jednou pustit a on udělá build s každou změnou.</p>
+<p>Do <code>scripts</code> v <code>package.json</code> přidáme <code>dev</code> (development) zkratku s přepínačem <code>--watch</code>.</p>
+<pre class="language-json"><code class="language-json">	<span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>		<span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"sass styly.scss styly.css"</span><span class="token punctuation">,</span><br>		<span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"sass --watch styly.scss styly.css"</span><br>	<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h2>Spojování</h2>
+<p>Podobně jako v CSS i SASS umí spojovat více stylových souborů dohromady pomocí zápisu <code>@import</code>. Výhodou je, že výsledné sestavené styly jsou jen v souboru jednom a prohlížeč se tak nemusí dotazovat na každý dílek zvlášť a ztrácet tím čas. Importem je možné i zapojit experní knihovny jako je například <a href="https://www.npmjs.com/package/bootstrap">Bootstrap</a>.</p>
+<h2>Úkol na teď</h2>
+<p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-SASS-Bootstrap">github.com/…/Cviceni-SASS-Bootstrap</a>.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Obrázkové formáty</h1>
+<p>Velikost obrázkových souborů se snažíme držet co nejmenší, aby k návštěvníkům přes internet rychle doputovaly. Nepoužíváme proto zbytečně příliš kvalitní fotografie například pro malé náhledy v galerii. Pro zmenšení obrázků se ti může hodit online nástroj <a href="https://squoosh.app/">Squoosh</a>. Další možnou úsporou je volba vhodného formátu, přípony souboru. Na webu se najčastěji setkáváme s <code>.jpg</code>, <code>.png</code>, <code>.svg</code>.</p>
+<h2>Nejčastější formáty</h2>
+<h3>JPG</h3>
+<p>Vhodný na fotografie, kdy není kladen důraz na přesnost každého pixelu, protože používá ztrátovou kompresi. (Často s nastavením „<a href="https://www.google.com/search?q=progressive+jpeg&amp;tbm=isch">progresivního renderování</a>“, kdy se obrázek na pomalém připojení postupně zaostřuje místo načítání po řádcích od shora dolů.)</p>
+<h3>PNG</h3>
+<p>Občas za cenu větší velikosti nabízí na pixel přesné zaznamenání obrzu. Vhodné pro snímky obrazovky.</p>
+<h3>SVG</h3>
+<p>Vektorový formát vodný zejména pro ikonky, logo, obrázky složené z geometrických tvarů. Lze v prohlížeči zvětšovat bez ztráty kvality. Obsah souboru je v čitelné podobě připomínající HTML.</p>
+<h2>Další používané</h2>
+<h3>GIF</h3>
+<p>Krátké animace s nízkým počtem barev.</p>
+<h3>WEBP</h3>
+<p>Kombinuje výhody JPG a PNG, ale prohlížeče ho začali podporovat teprve <a href="https://caniuse.com/webp">nedávno</a>.</p>
+<h3>ICO</h3>
+<p>Používaný pouze pro ikonku záložky (<code>favicon.ico</code>). Postupně nahrazovaný modernějšími formáty.</p>
+<h2>Volitelné čtení na doma</h2>
+<p>Responzivní weby často vyžadují různě veliké obrázky podle velikosti zařízení. Jeden soubor/fotografie může být zbytečně moc velký na malé obrazovce nebo naopak moc malý, nekvalitní na obrazovce velké. Pomocí atributů <code>srcset</code> a <code>sizes</code> můžeme jednomu HTML obrázku přiřadit více souborů s odlišnými parametry. Více například na <a href="https://www.vzhurudolu.cz/prirucka/srcset-sizes">Vzhůru dolů</a> nebo <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">MDN</a>.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
