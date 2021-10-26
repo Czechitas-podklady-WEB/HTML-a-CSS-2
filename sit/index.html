@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Síť</h1>
+<p>Pro rychlé načítání webu je užitečné hlídat, co se přenáší přes síť, přes internet k uživateli. Každý přenesený kilobajt zabere nějaký čas. Dále záleží na pořádí. Typicky cílíme na to, aby se jako první načetl obsah, styly, obrázky toho, co uživatel uvidí jako první.</p>
+<p>S pokročilou analýzou přenosů přes síť nám pomohou vývojářské nástroje a jejich panel <code>Network</code> (Síť).</p>
+<p><img src="static/screenshots/network-panel.png" alt="Network panel"></p>
+<p>Po levé straně vidíme názvy souborů, které prohlížeč stáhl. Začíná s HTML <code>obrazkove-formaty/</code>, ze kterého se dozvěděl, jaké další soubory potřebuje. Jak postupně objevoval další, můžeme vyčíst z posledního sloupce <code>Waterfall</code> (vodopád). Další zajímavý údaj najdeme ve sloupci <code>Size</code> (velikost), podle kterého můžeme často odhadnout, které soubory jsou až moc velké a zasloužily by si zmenšit.</p>
+<p>V ukázkovém příkladu by stálo za kontrolu, jestli třeba obrázky <code>czechitas.png</code> a <code>kocka.gif</code> nemůžeme zmenšit. Nehodí se to vždy, ale u velikostí v řádu stovek KB nebo dokonce MB bychom měli minimálně zpozornět.</p>
+<p>U obrázků můžeme také zvážit líné načítání až ve chvíli, kdy se najíždí do obrazovky pomocí atributu <code>loading=&quot;lazy&quot;</code>. To se může nejvíce vyplatit třeba u obrázků v patičce nebo na hodně dlouhých stránkách.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span><br>	<span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://placekitten.com/408/287<span class="token punctuation">"</span></span><br>	<span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>408<span class="token punctuation">"</span></span><br>	<span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>287<span class="token punctuation">"</span></span><br>	<span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>kočka<span class="token punctuation">"</span></span><br>	<span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span><br><span class="token punctuation">/></span></span></code></pre>
+<p>Dále si můžeme všimnout, že některé CSS soubory se načítají skoro až poslední. Prohlížeč stylům přiřazuje vysokou důležitost a bez nich uživateli jen tak něco neukáže. Proto by bylo dobré zapřemýšlet, jak je načíst dříve. Ideálně ještě před obrázky. Dost často stačí jen všechny styly spojit do jednoho souboru třeba pomocí SASSu.</p>
+<h2>Úkol na teď</h2>
+<p>Postupuj podle zadání na <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-Rychlost-nacitani">github.com/…/Cviceni-Rychlost-nacitani</a>.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
