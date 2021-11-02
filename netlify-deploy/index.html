@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Netlify deploy</h1>
+<p>Alternativa GitHub pages. Také se umí zdarma propojit s repozitáři na GitHubu a vystavovat je jako veřejné stránky.</p>
+<p>Pro pokročilé funkce je nutné se registrovat na <a href="https://app.netlify.com/">app.netlify.com</a> ideálně přes GitHub tlačítko, aby další provázání s GitHubem bylo co nejjednodušší.</p>
+<p>Netlify při vystavování nové verze může pouštět <code>npm</code> příkazy a tím vytvořit například složku <code>dist</code>. To se hodí u projektů postavených pomocí Eleventy.</p>
+<h2>Napojení prvního repozitáře</h2>
+<p>Předpokládejme, že máme na GitHubu veřejný repozitář se zdrojovými kódy webu postaveného na Eleventy. Tento web chceme zpřístupnit běžným uživatelům internetu, pro které musíme vytvořit distribuční složku a nahrát ji na nějaký hosting.</p>
+<ul>
+<li>
+<p>Po přihlášení na <a href="https://app.netlify.com/">Netlify</a> najdeme tlačíko pro spuštění nového webu z gitu pomocí tlačítka <code>New site from Git</code>.</p>
+<p><img src="static/screenshots/netlify-new.png" alt="New site from Git"></p>
+</li>
+<li>
+<p>Dále volíme provázání s GitHubem.</p>
+<p><img src="static/screenshots/netlify-github.png" alt="Netlify + GitHub"></p>
+</li>
+<li>
+<p>Výzvu o udělení přístupu, aby Netlify mohlo číst náš kód z GitHubu, schválíme.</p>
+</li>
+<li>
+<p>Vyhledáme repozitář.</p>
+<p><img src="static/screenshots/netlify-search.png" alt="Netlify vyhledávání"></p>
+</li>
+<li>
+<p>Nastavíme instrukce pro sestavení a pustíme první nasazení/deploy. Pro konkrétní projekt je především důležitá část <code>Build command</code>, kam dáváme příkaz pro sestavení a <code>Publish directory</code>, ve které vzniknou soubory určené pro prohlížeče.</p>
+<p><img src="static/screenshots/netlify-command.png" alt="Netlify nastavení"></p>
+</li>
+<li>
+<p>Až deploy doběhne, v horní části přehledu se nám ukáže adresa, kde web běží.</p>
+</li>
+<li>
+<p>Kdykoliv pushneme na GitHub, Netlify si automaticky převezme nový kód, sestaví ho a nasadí na stejnou adresu.</p>
+</li>
+</ul>
+<h2>Úprava domény</h2>
+<p>Netlify automaticky pro každý projekt vybírá náhodnou adresu končící na <code>.netlify.app</code>. Text před první tečkou je možné změnit v sekci <code>Domain settings</code> &gt; <code>Options</code> &gt; <code>Edit site name</code>.</p>
+<p><img src="static/screenshots/netlify-domain-settings.png" alt="Netlify domain settings"></p>
+<p><img src="static/screenshots/netlify-edit-site-name.png" alt="Netlify edit site name"></p>
+<p>Pro provázání s vlastní koupenou doménou pak slouží tlačítko <code>Add custom domain</code>.</p>
+<h2>Úkol na teď</h2>
+<ul>
+<li>
+<p>Vyber si z existujících nebo nahraj nový Eleventy repozitář na tvůj GitHub účet.</p>
+</li>
+<li>
+<p>Propoj ho s Netlify.</p>
+</li>
+<li>
+<p>Odkaz na veřejnou stránku <code>*.netlify.app</code> přidej do popisku repozitáře na GitHubu.</p>
+</li>
+<li>
+<p>Něco v repozitáři uprav, commitni a pushni. Můžeš změnit třeba nějaký nadpis. Koukni do administrace Netlify a sleduj, jestli se automaticky spustil nový deployment.</p>
+</li>
+<li>
+<p>Až doběhne, zkontroluj, že se data na webu změnila.</p>
+</li>
+</ul>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
