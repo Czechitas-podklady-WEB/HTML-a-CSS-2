@@ -31,6 +31,7 @@ h5,
 h6 {
 	font-family: inherit;
 	color: var(--blue);
+	margin-block-start: 1.75em;
 }
 
 a {
