@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			HTML a CSS 2
+		</title>
+		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				<h1>Metadata</h1>
+<p>Do hlavičky <code>&lt;head&gt;</code> přidáváme mimo jiné různé doprovodné informace, které slouží pro lepší prezentaci stránky mimo viewport, který zobrazuje obsah <code>&lt;body&gt;</code>.</p>
+<h2>Název</h2>
+<p>Hlavní text, který se ukazuje ve výsledcích vyhledávání, při sdílení, v záložkách.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Název webu<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></code></pre>
+<h2>Favicon</h2>
+<p>Malá ikonka ukazující se vedle názvu.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>favicon.ico<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/x-icon<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<p>Moderní prohlížeče pro favicon podporují už i <a href="https://caniuse.com/link-icon-png">PNG</a> a některé dokonce <a href="https://caniuse.com/link-icon-svg">SVG</a>.</p>
+<h2>Popis</h2>
+<p>Stručné shrnutí obsahu webu. Ukazuje se při sdílení, v některých vyhledávačích.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>description<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Popis dlouhý přibližně 50 až 160 znaků.<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h2>Obrázek</h2>
+<p>Doprovodný obrázek pro sdílení. Doporučený poměr stran je <code>2:1</code>. Pro <a href="https://developers.facebook.com/docs/sharing/webmasters/images/">Facebook</a> pak rozlišení <code>1200 x 630</code>.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span><br>	<span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>og:image<span class="token punctuation">"</span></span><br>	<span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg<span class="token punctuation">"</span></span><br><span class="token punctuation">/></span></span></code></pre>
+<p>Adresu obrázku je spolehlivější psát celou i s doménou a protokolem (<code>http*</code>). Některé sociální sítě, chatovací aplikace si bez toho obrázek neumí načíst. Aby se mohli rychleji přizpůsobit rozměrům obrázku, je vhodné předchozí meta tag doplnit ještě o dva doplňkové s rozměry.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>og:image:width<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1200<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">property</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>og:image:height<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>630<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
+<h2>Úkol na teď</h2>
+<ul>
+<li>
+<p>Přidej do projektu meta tagy pro lepší sdílení webu na sociálních sítích.</p>
+<ul>
+<li>
+<p>Pokračuj v libovolném projektu postaveném na Eleventy nasazeném na Netlify.</p>
+</li>
+<li>
+<p>Přichystej si obrázek pro <code>og:image</code>. Použij tvůj vlastní nebo si nějaký stáhni třeba na <a href="https://unsplash.com/">unsplash.com</a>.</p>
+</li>
+<li>
+<p>Ořízni ho do doporučených rozměrů. Pro ořez můžeš použít <a href="https://squoosh.app/">squoosh.app</a> nebo jiný editor.</p>
+</li>
+<li>
+<p>Do layoutu společného pro všechny stránky mezi značky <code>&lt;head&gt;</code> přidej odkaz na obrázek z kroků výše.</p>
+</li>
+<li>
+<p>Přidej ještě textový popis webu, <code>description</code>. Obsah vymysli vlastní vhodný pro konkrétní projekt nebo použij následující: <code>Zkušební popis webu pro otestování sdílení na sociálních sítích.</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Změny commitni, pushni a počkej, až se nasadí.</p>
+</li>
+<li>
+<p>Otestuj, že se obrázek a popis při sdílení ukazuje.</p>
+<ul>
+<li>
+<p>Můžeš například na Facebooku pro test sdílet příspěvek, který uvidíš jenom ty. Po vyzkoušení ho klidně smaž. Nebo si ve zprávách pošli odkaz sama sobě.</p>
+<p><img src="static/screenshots/facebook-og-image.png" alt="Facebook og:image"></p>
+</li>
+<li>
+<p>Občas se stává, že při prvním sdílení se obrázek hned neukáže. Pokud je to tvůj případ, ověř, že ho Facebook najde alespoň v nástroji <a href="https://developers.facebook.com/tools/debug/">Sharing Debugger</a>.</p>
+</li>
+<li>
+<p>Pro znovunačtení nejaktuálnějších informací o tvém webu použij tlačítko <code>Scrape Again</code>. Hodí se v situaci, kdy obrázek při vývoji často měníš.</p>
+<p><img src="static/screenshots/facebook-scrape-again.png" alt="Facebook scrape again"></p>
+</li>
+</ul>
+</li>
+</ul>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
