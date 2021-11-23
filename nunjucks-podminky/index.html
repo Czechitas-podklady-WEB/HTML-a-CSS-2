@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<base href="/HTML-a-CSS-2/">
 		<title>
-			HTML a CSS 2
+			Nunjucks podmínky | HTML a CSS 2
 		</title>
 		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
 		<link rel="stylesheet" href="static/main.css">
@@ -38,8 +38,10 @@
 				</h1>
 			</header>
 			<main>
-				<h1>Nunjucks podmínky</h1>
-<p>Pokud chceme na stránce vypsat kus HTML jen v případě, že platí nějaká podmínka, použijeme <code>{% if %}</code>.</p>
+				
+					<h1>Nunjucks podmínky</h1>
+				
+				<p>Pokud chceme na stránce vypsat kus HTML jen v případě, že platí nějaká podmínka, použijeme <code>{% if %}</code>.</p>
 <pre class="language-liquid"><code class="language-liquid"><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%</span> <span class="token keyword">if</span> film<span class="token punctuation">.</span>rokNatoceni <span class="token operator">==</span> <span class="token number">2021</span> <span class="token delimiter punctuation">%}</span></span><br>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>Film byl natočen letos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%</span> <span class="token keyword">endif</span> <span class="token delimiter punctuation">%}</span></span></code></pre>
 <p>Dvojité rovná se <code>==</code> je zde záměrně. Stejně jako v jiných programovacích jazycích i zde plní roli porovnání. Samotné <code>=</code> slouží k přiřazení nové hodnoty.</p>
 <p>Pokud chceme vypsat něco jiného v případě, že podmínka neplatí, doplníme zápis o větev <code>{% else %}</code>. Podmínku můžeme kombinovat i s filtry.</p>

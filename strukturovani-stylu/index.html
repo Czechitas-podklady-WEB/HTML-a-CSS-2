@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<base href="/HTML-a-CSS-2/">
 		<title>
-			HTML a CSS 2
+			Strukturování stylů | HTML a CSS 2
 		</title>
 		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
 		<link rel="stylesheet" href="static/main.css">
@@ -38,8 +38,10 @@
 				</h1>
 			</header>
 			<main>
-				<h1>Strukturování stylů</h1>
-<p>Větší projekty mohou mít stovky i tisíce řádků CSS. Pro větší přehlednost je lepší kód rozdělit do více souborů. Typicky po komponentách.</p>
+				
+					<h1>Strukturování stylů</h1>
+				
+				<p>Větší projekty mohou mít stovky i tisíce řádků CSS. Pro větší přehlednost je lepší kód rozdělit do více souborů. Typicky po komponentách.</p>
 <h3>Styly</h3>
 <h4>spolecne.css</h4>
 <pre class="language-css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">{</span><br>	<span class="token property">--brand-color</span><span class="token punctuation">:</span> #e6007e<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">html</span> <span class="token punctuation">{</span><br>	<span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">*,<br>*::before,<br>*::after</span> <span class="token punctuation">{</span><br>	<span class="token property">box-sizing</span><span class="token punctuation">:</span> inherit<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><span class="token selector">body</span> <span class="token punctuation">{</span><br>	<span class="token property">font-family</span><span class="token punctuation">:</span> Helvetica<span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><br>	<span class="token property">background-color</span><span class="token punctuation">:</span> #000000<span class="token punctuation">;</span><br>	<span class="token property">color</span><span class="token punctuation">:</span> #ffffff<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>

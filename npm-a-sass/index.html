@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<base href="/HTML-a-CSS-2/">
 		<title>
-			HTML a CSS 2
+			Npm a SASS | HTML a CSS 2
 		</title>
 		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
 		<link rel="stylesheet" href="static/main.css">
@@ -38,8 +38,10 @@
 				</h1>
 			</header>
 			<main>
-				<h1>Npm a SASS</h1>
-<h2>Opakování</h2>
+				
+					<h1>Npm a SASS</h1>
+				
+				<h2>Opakování</h2>
 <ul>
 <li>
 <p><code>npm init</code> nachystá složku pro práci s balíčky. Vytvoří soubor <code>package.json</code>.</p>
@@ -57,11 +59,11 @@
 </ul>
 </li>
 <li>
-<p>Pro sestavení/přeložení zdrojových souborů ze SASSu do CSS přidáváme do <code>package.json</code> v sekci <code>scripts</code> zkratku <code>&quot;build&quot;: &quot;sass zdroj.scss vystup.css&quot;</code>. Po každé změně <code>zdroj.scss</code> pouštíme <code>npm run build</code>.</p>
+<p>Pro sestavení/přeložení zdrojových souborů ze SASSu do CSS přidáváme do <code>package.json</code> v sekci <code>scripts</code> zkratku <code>&quot;build&quot;: &quot;sass zdroj.scss vystup.css&quot;</code>. Po každé změně <code>zdroj.scss</code> pouštíme <code>npm run build</code>.</p>
 </li>
 </ul>
 <h2>Vývojový režim</h2>
-<p>Pokud děláme ve zdrojových souborech hodně změn za sebou, můžeme si ušetřit práci a nepouštět <code>npm run build</code> ručně stále dokola. Balíček <code>sass</code> umí běžet i ve sledovacím režimu, kdy ho stačí jednou pustit a on udělá build s každou změnou.</p>
+<p>Pokud děláme ve zdrojových souborech hodně změn za sebou, můžeme si ušetřit práci a nepouštět <code>npm run build</code> ručně stále dokola. Balíček <code>sass</code> umí běžet i ve sledovacím režimu, kdy ho stačí jednou pustit a on udělá build s každou změnou.</p>
 <p>Do <code>scripts</code> v <code>package.json</code> přidáme <code>dev</code> (development) zkratku s přepínačem <code>--watch</code>.</p>
 <pre class="language-json"><code class="language-json">	<span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>		<span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"sass styly.scss styly.css"</span><span class="token punctuation">,</span><br>		<span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"sass --watch styly.scss styly.css"</span><br>	<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 <h2>Spojování</h2>

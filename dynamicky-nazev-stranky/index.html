@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			Dynamický název stránky | HTML a CSS 2
+		</title>
+		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G16GL5F580"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G16GL5F580');
+		</script>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				
+					<h1>Dynamický název stránky</h1>
+				
+				<p>Bývá zvykem v názvu stránky zahrnout i označení aktuální podstránky. Například z <code>HTML a CSS 2</code> udělat <code>Dynamický název stránky | HTML a CSS 2</code>. Není však žádné pravidlo, jestli oddělovač má být právě <code>|</code>, <code>-</code> nebo dokonce <code>•</code>. Stejně tak nikde není stanoveno, jestli hlavní název webu vždy musí být přítomen nebo jestli nemůže být první takto <code>HTML a CSS 2 - Dynamický název stránky</code>.</p>
+<h3>Nadpis pro všechny stránky stejný</h3>
+<p><img src="static/screenshots/title-zakladni.png" alt="základní nadpis"></p>
+<h3>Nadpis s názvem podstránky</h3>
+<p><img src="static/screenshots/title-rozsireny.png" alt="rozšířený nadpis"></p>
+<h2>Využití</h2>
+<ul>
+<li>
+<p>Rozšířený nadpis může vylepšit uživatelu orientaci ve více záložkách, v oblíbených.</p>
+</li>
+<li>
+<p>Může mít také pozitivní dopad na výsledky vyhledávání (SEO), protože vyhledávače předpokládají, že v nadpisu je důležitý text aktuální stránky, který navíc vyhledávač často použije jako náhledový text ve výsledcích.</p>
+</li>
+<li>
+<p>Společně s dalšími <a href="metadata">metadaty</a> je použit při sdílení na sociálních sítích.</p>
+</li>
+</ul>
+<h2>Úprava šablony</h2>
+<p>Na webu s větším počtem stránek může zjednodušit údržbu úprava základního layoutu. Předpokládejme, že každá podstránka, u které chceme rozšířený nadpis má nastavenou proměnnou <code>nadpis</code>. Šablona by pak mohla vypadat takto:</p>
+<h3><code>layouty/zakladni.njk</code></h3>
+<pre class="language-liquid"><code class="language-liquid"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{%</span> <span class="token keyword">if</span> nadpis <span class="token delimiter punctuation">%}</span></span><span class="token liquid language-liquid"><span class="token delimiter punctuation">{{</span> nadpis <span class="token delimiter punctuation">}}</span></span> | <span class="token liquid language-liquid"><span class="token delimiter punctuation">{%</span> <span class="token keyword">endif</span> <span class="token delimiter punctuation">%}</span></span>HTML a CSS 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></code></pre>
+<p>Pokud má stránka <code>nadpis</code>, použije se a přidá se za něj <code>|</code>.</p>
+<h3><code>podstranka.njk</code></h3>
+<pre class="language-liquid"><code class="language-liquid">---<br>layout: zakladni<br>nadpis: Dynamický název stránky<br>---<br><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>…<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></code></pre>
+<p>Nadpis můžeme předat přes data ve Front Matter podle ukázky výše nebo pomocí JSON souboru.</p>
+<p>A výsledné HTML pak bude vypadat takto:</p>
+<h3><code>podstranka/index.html</code></h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Dynamický název stránky | HTML a CSS 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></code></pre>
+<h2>Úkol na teď</h2>
+<ul>
+<li>
+<p>V projektu postaveném na Eleventy s více podstránkami doplň do <code>&lt;title&gt;</code> název jednotlivých podstránek. Můžeš například rozšířit domácí úkol <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-Eleventy-filmy">filmy</a> nebo navázat na bonusovou část v <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-Eleventy-galerie">galerii</a>.</p>
+<p>(Pokud nemáš na co navázat, můžeš si zde stáhnout hotovou galerii, kde stačí detailovým stránkám doplnit <code>&lt;title&gt;</code> obsahujíci popisek. <a href="https://github.com/Czechitas-podklady-WEB/Cviceni-Eleventy-galerie/archive/refs/heads/reseni.zip">Galerie s bonusem</a>)</p>
+<h3>Ukázka detailu filmu</h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Duna | FILMY.cz<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></code></pre>
+<h3>Ukázka detailové stránky s obrázkem galerie</h3>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Jezero | Galerie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<h3>Bonus</h3>
+<ul>
+<li>
+<p>Pokud sis v předchozím úkolu zvolila projekt s filmy, doplň do základního layoutu <a href="metadata">meta tag</a> pro popis (<code>description</code>) s textem <code>Filmová databáze vybraných filmů. Web slouží jako cvičení práce s Eleventy.</code></p>
+</li>
+<li>
+<p>Pomocí podmínky pro stránky s detailem filmu použij text shrnující obsah filmu <code>{{ film.obsah.text }}</code>.</p>
+</li>
+<li>
+<p>Obsah je pro <code>description</code> většinou moc dlouhý. Pomocí filtru <a href="https://mozilla.github.io/nunjucks/templating.html#truncate">truncate</a> ho ořízni jen na 100 znaků.</p>
+</li>
+<li>
+<p>(Filtr nešťastně pro výpustku používá tři samostatné znaky tečky <code>...</code>, které většina fontů vykresluje příliš daleko od sebe. Nahraď je za speciální symbol tří teček <code>…</code>)</p>
+</li>
+<li>
+<p>Nezapomeň zkontrolovat výsledné HTML třeba přes vývojářské nástroje, ve složce <code>dist</code> nebo jiným zobrazením zdrojového kódu stránky.</p>
+</li>
+</ul>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>

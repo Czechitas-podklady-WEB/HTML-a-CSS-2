@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			Facebook pixel | HTML a CSS 2
+		</title>
+		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G16GL5F580"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G16GL5F580');
+		</script>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				
+					<h1>Facebook pixel</h1>
+				
+				<p>Podobný nástroj jako <a href="google-analytics">Google Analytics</a>. Zaměřuje se především na reklamní kampaně, zvyšování marketingových konverzí. Po nasazení kódu Facebook pixelu na web je pak jednodušší cílit reklamu a vyhodnocovat její úspěšnost.</p>
+<p>Kód pro vložení do všech stránek vypadá takto:</p>
+<!-- prettier-ignore -->
+<pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Facebook Pixel Code --></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"><br>  <span class="token operator">!</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">f<span class="token punctuation">,</span>b<span class="token punctuation">,</span>e<span class="token punctuation">,</span>v<span class="token punctuation">,</span>n<span class="token punctuation">,</span>t<span class="token punctuation">,</span>s</span><span class="token punctuation">)</span><br>  <span class="token punctuation">{</span><span class="token keyword">if</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>fbq<span class="token punctuation">)</span><span class="token keyword">return</span><span class="token punctuation">;</span>n<span class="token operator">=</span>f<span class="token punctuation">.</span><span class="token function-variable function">fbq</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>n<span class="token punctuation">.</span>callMethod<span class="token operator">?</span><br>  n<span class="token punctuation">.</span><span class="token function">callMethod</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span>arguments<span class="token punctuation">)</span><span class="token operator">:</span>n<span class="token punctuation">.</span>queue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span><br>  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>f<span class="token punctuation">.</span>_fbq<span class="token punctuation">)</span>f<span class="token punctuation">.</span>_fbq<span class="token operator">=</span>n<span class="token punctuation">;</span>n<span class="token punctuation">.</span>push<span class="token operator">=</span>n<span class="token punctuation">;</span>n<span class="token punctuation">.</span>loaded<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">;</span>n<span class="token punctuation">.</span>version<span class="token operator">=</span><span class="token string">'2.0'</span><span class="token punctuation">;</span><br>  n<span class="token punctuation">.</span>queue<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>t<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>t<span class="token punctuation">.</span>async<span class="token operator">=</span><span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">;</span><br>  t<span class="token punctuation">.</span>src<span class="token operator">=</span>v<span class="token punctuation">;</span>s<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>  s<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">(</span>window<span class="token punctuation">,</span> document<span class="token punctuation">,</span><span class="token string">'script'</span><span class="token punctuation">,</span><br>  <span class="token string">'https://connect.facebook.net/en_US/fbevents.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token function">fbq</span><span class="token punctuation">(</span><span class="token string">'init'</span><span class="token punctuation">,</span> <span class="token string">'{your-pixel-id-goes-here}'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  <span class="token function">fbq</span><span class="token punctuation">(</span><span class="token string">'track'</span><span class="token punctuation">,</span> <span class="token string">'PageView'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>noscript</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">display</span><span class="token punctuation">:</span>none</span><span class="token punctuation">"</span></span></span><br>       <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.facebook.com/tr?id={your-pixel-id-goes-here}&amp;ev=PageView&amp;noscript=1<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>noscript</span><span class="token punctuation">></span></span><br><span class="token comment">&lt;!-- End Facebook Pixel Code --></span></code></pre>
+<p>Značku <code>{your-pixel-id-goes-here}</code> je potřeba nahradit za indentifikátor vytvořený v administraci <a href="https://www.facebook.com/business/">Meta for Business</a>. O jeho založení se většinou stará marketingové oddělení, které frontendistům už jen přeposílá identifikátor a instrukce s kusem kódu výše.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
