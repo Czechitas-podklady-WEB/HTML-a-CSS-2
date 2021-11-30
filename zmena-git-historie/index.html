@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<base href="/HTML-a-CSS-2/">
+		<title>
+			Změna git historie | HTML a CSS 2
+		</title>
+		<meta name="description" content="Podklady pro online kurz HTML a CSS 2 od Czechitas.">
+		<link rel="stylesheet" href="static/main.css">
+		<link rel="icon" type="image/png" href="static/favicon.png" sizes="64x64">
+		<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+		<meta property="og:image" content="https://czechitas-podklady-web.github.io/HTML-a-CSS-2/static/og-image.jpg"/>
+		<meta property="og:image:width" content="1200"/>
+		<meta property="og:image:height" content="630"/>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G16GL5F580"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G16GL5F580');
+		</script>
+	</head>
+	<body>
+		<div class="layout">
+			<header class="header">
+				<h1>
+					<a href="" class="header__link">
+						<img src="static/logo.png" width="206" height="60" alt="logo Czechitas">
+						<span>HTML a CSS 2</span>
+					</a>
+				</h1>
+			</header>
+			<main>
+				
+					<h1>Změna git historie</h1>
+				
+				<h2>Úprava posledního commitu</h2>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> commit --amend<br><span class="token function">git</span> push --force</code></pre>
+<p>Přidá změny do posledního commitu.</p>
+<p>Mění historii. Pokud byl poslední commit už pushnutý, je potřeba pushnout znovu s přepínačem <code>--force</code>.</p>
+<h2>Revert</h2>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> revert abc123<br><span class="token function">git</span> push</code></pre>
+<p>Vytvoří nový commit s opačnými změnami.</p>
+<p>Místo <code>abc123</code> přijde hash commitu, který vypadá přibližně takto: <code>5b8a5485ae61f0ac998ee709222e6d90268ef394</code>. Dá se zjistit například z historie na GitHubu. Může být i zkrácený.</p>
+<p>Nemění historii. Všechny commity zůstanou zachované.</p>
+<h2>Návrat ke staršímu commitu</h2>
+<p>⚠ Zahodí novější změny.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> reset --hard abc123<br><span class="token function">git</span> push --force</code></pre>
+<h2>Rebase</h2>
+<p>Užitečné například pro hromadné úpravy několika commitů naráz.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">git</span> rebase --interactive HEAD~5<br><span class="token function">git</span> push --force</code></pre>
+<p>Spustí úpravu poslední pěti commitů. Číslo za vlnkou můžeme upravit podle potřeby.</p>
+<p>Běheme rebase můžeme například měnit zprávy commitů, zahodi některé commity nebo je sloučit.</p>
+
+			</main>
+			<footer class="layout__footer">
+				© 2021 <a href="https://www.czechitas.cz/">Czechitas z.ú.</a>
+			</footer>
+		</div>
+	</body>
+</html>
